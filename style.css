@@ -1,0 +1,467 @@
+/* --- 1. GLOBAL RESET & TYPOGRAPHY --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+    color: #222;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- 2. DYNAMIC HEADER --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: all 0.4s ease-in-out;
+    /* Using item1.jpeg with a dark overlay for professional contrast */
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                url('item1.mp4') center/cover no-repeat;
+    border-bottom: 2px solid #d90429;
+}
+/* Ensure the slide container is relative so the video can be absolute */
+.slide {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; /* Or your preferred height */
+}
+
+/* Make the video cover the entire background */
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* This keeps the aspect ratio perfect */
+}
+
+/* The Dark Overlay (Replaces the linear-gradient you had on the image) */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust darkness here */
+    z-index: 1;
+}
+
+/* Ensure the text is on top of everything */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+header.scrolled {
+    padding: 10px 0;
+    background: #111; /* Solid dark transition on scroll */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li { margin-left: 30px; }
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav ul li a:hover { color: #d90429; }
+
+#menu-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* --- 3. HERO SLIDER --- */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active { opacity: 1; z-index: 1; }
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Glass effect */
+    border-left: 6px solid #d90429;
+    border-radius: 4px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* --- 4. SECTIONS & GRID --- */
+.section { padding: 100px 5%; max-width: 1300px; margin: 0 auto; text-align: center; }
+.section.grey { background: #f8f9fa; max-width: 100%; }
+
+.section-header { margin-bottom: 50px; }
+.subtitle { color: #d90429; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; display: block; }
+.section h2 { font-size: 2.5rem; text-transform: uppercase; margin-top: 10px; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.4s;
+}
+
+.card:hover { transform: translateY(-10px); border-bottom: 4px solid #d90429; }
+.card-icon { font-size: 40px; color: #d90429; margin-bottom: 20px; }
+
+/* --- 5. GALLERY --- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.product-item {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.product-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.product-item .overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(transparent, rgba(217, 4, 41, 0.8));
+    display: flex; align-items: flex-end; padding: 20px;
+    opacity: 0; transition: 0.4s;
+}
+
+.product-item:hover .overlay { opacity: 1; }
+.product-item:hover img { transform: scale(1.1); }
+.product-item span { color: #fff; font-weight: 700; }
+
+/* --- 6. STATS & CLIENTS --- */
+.stats {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/item1.jpeg') fixed center/cover;
+    padding: 80px 10%;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stat h2 { font-size: 3rem; color: #d90429; }
+
+.clients { padding: 80px 0; overflow: hidden; }
+.client-track {
+    display: flex;
+    width: max-content;
+    gap: 60px;
+    animation: scroll 20s linear infinite;
+}
+
+.client-logo-box img { height: 50px; filter: grayscale(1); opacity: 0.6; transition: 0.3s; }
+.client-logo-box img:hover { filter: grayscale(0); opacity: 1; }
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* --- 7. MODAL --- */
+.modal {
+    display: none; 
+    position: fixed; z-index: 2000; inset: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: #fff;
+    margin: 5% auto;
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close { position: absolute; right: 20px; top: 10px; font-size: 28px; cursor: pointer; }
+
+form input, form textarea {
+    width: 100%; padding: 12px; margin-bottom: 15px;
+    border: 1px solid #ddd; border-radius: 4px;
+}
+
+/* --- 8. BUTTONS & UTILS --- */
+.btn {
+    background: #d90429; color: #fff; padding: 15px 30px;
+    border: none; cursor: pointer; font-weight: 700; text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn:hover { background: #111; transform: scale(1.05); }
+
+.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+footer { background: #111; color: #fff; padding: 40px; text-align: center; }
+
+/* --- 9. MOBILE --- */
+@media (max-width: 768px) {
+    #menu-btn { display: block; }
+    nav ul {
+        display: none;
+        position: absolute; top: 100%; left: 0; width: 100%;
+        background: #111; flex-direction: column; padding: 20px;
+    }
+    nav ul.active { display: flex; }
+    nav ul li { margin: 15px 0; }
+    .stats { flex-direction: column; gap: 30px; }
+}
+
+.cable-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 5%;
+}
+
+.cable-category {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 4px solid #d90429;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.category-header i {
+    font-size: 1.5rem;
+    color: #d90429;
+    margin-right: 15px;
+}
+
+.voltage-label {
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.product-list {
+    list-style: none;
+    padding: 0;
+}
+
+.product-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+.product-list.specialty li {
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+}
+
+.product-list.specialty i {
+    color: #2ecc71;
+    margin-right: 10px;
+    font-size: 0.8rem;
+}
+
+.service-note {
+    text-align: center;
+    margin-top: 40px;
+    background: #2b2d42;
+    color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 60px 0 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-col h4 {
+    color: #d90429; /* Using your accent red */
+    margin-bottom: 25px;
+    font-weight: 600;
+    position: relative;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.contact-item i {
+    color: #d90429;
+    margin-top: 5px;
+}
+
+.contact-item a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #d90429;
+}
+
+
+/* Styling for the floating container */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF !important; /* Forces the icon to be white */
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* Specific fix for the FontAwesome icon */
+.whatsapp-float i {
+    font-family: "Font Awesome 5 Brands" !important; /* Ensures the correct font family */
+    font-weight: 400;
+    font-style: normal;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    transition: 0.3s;
+}

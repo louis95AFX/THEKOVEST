@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>THEKOVEST (PTY) LTD | Gulley Boxes & Electrical Solutions</title>
+    
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        
+        <script src="https://kit.fontawesome.com/4adadbbf6b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <header id="header">
+        <div class="nav-container">
+            <img src="logo1.jpeg" alt="THEKOVEST Logo" class="logo">
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact" class="nav-cta" onclick="openModal()" 
+                           style="background: #d90429; padding: 10px 20px; border-radius: 4px;">Get a Quote</a></li>
+                </ul>
+            </nav>
+            <div id="menu-btn" style="color: #fff;"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="slides">
+            <div class="slide active">
+                <video autoplay muted loop playsinline class="bg-video">
+                    <source src="item1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="video-overlay"></div>
+    
+                <div class="hero-content">
+                    <h1>THEKOVEST</h1>
+                    <p>Industrial strength solutions engineered for high-performance mining and electrical environments.</p>
+                    <button class="btn" onclick="openModal()">Request Quote</button>
+                </div>
+            </div>
+    
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/slide2.jpg')">
+                </div>
+        </div>
+    </section>
+
+<section id="services" class="section">
+    <div class="section-header reveal">
+        <span class="subtitle">Our Expertise</span>
+        <h2>Precision Industrial Solutions</h2>
+    </div>
+
+    <div class="grid">
+        <div class="card reveal">
+            <div class="card-icon"><i class="fas fa-industry"></i></div>
+            <h3>Gulley Box Manufacturing</h3>
+            <p>SABS compliant IP40, IP54, and IP65 custom enclosures built to survive the harshest conditions.</p>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-icon"><i class="fas fa-bolt"></i></div>
+            <h3>MCC & PLC Panels</h3>
+            <p>High-efficiency motor control centres and integrated automation systems for seamless control.</p>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-icon"><i class="fas fa-tools"></i></div>
+            <h3>Forged Mining Tools</h3>
+            <p>Professional grade pinch bars, rigger spikes, and cold sets manufactured for durability.</p>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-icon"><i class="fas fa-hard-hat"></i></div>
+            <h3>Civil Engineering</h3>
+            <p>Specialized infrastructure development, bulk earthworks, and structural concrete solutions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="cables" class="section">
+    <div class="section-header reveal">
+        <span class="subtitle">Comprehensive Range</span>
+        <h2>Cable & Wire Solutions</h2>
+    </div>
+
+    <div class="cable-grid reveal">
+        <div class="cable-category">
+            <div class="category-header">
+                <i class="fas fa-bolt"></i>
+                <h3>Overhead Cables</h3>
+            </div>
+            <p class="voltage-label">LV, IV, MV & High Voltage</p>
+            <ul class="product-list">
+                <li><strong>ACSR</strong> (Aluminum Conductor Steel Reinforced)</li>
+                <li><strong>AAAC</strong> (All Aluminum Alloy Conductor)</li>
+                <li><strong>AAC</strong> (All Aluminum Conductor)</li>
+                <li><strong>ABC</strong> (Aerial Bundled Cable)</li>
+                <li><strong>Airdac</strong> SNE & CNE</li>
+            </ul>
+        </div>
+
+        <div class="cable-category">
+            <div class="category-header">
+                <i class="fas fa-layer-group"></i>
+                <h3>Underground Cables</h3>
+            </div>
+            <p class="voltage-label">LV, IV, MV & High Voltage</p>
+            <ul class="product-list">
+                <li>Aluminum and Copper Conductors</li>
+                <li>PVC, XLPE and Paper Insulated</li>
+                <li>FR, LH, HF (Fire Retardant/Halogen Free)</li>
+                <li>SWA, ECC and Unarmored</li>
+            </ul>
+        </div>
+
+        <div class="cable-category">
+            <div class="category-header">
+                <i class="fas fa-microchip"></i>
+                <h3>Specialized Solutions</h3>
+            </div>
+            <ul class="product-list specialty">
+                <li><i class="fas fa-check"></i> Earthing & Building Wires</li>
+                <li><i class="fas fa-check"></i> Flexible & Trailing Cables (Rubber/PVC)</li>
+                <li><i class="fas fa-check"></i> Solar Wire and Cable</li>
+                <li><i class="fas fa-check"></i> Specialised Mining & Agri Cables</li>
+                <li><i class="fas fa-check"></i> Communication Cables</li>
+            </ul>
+        </div>
+    </div>
+
+   
+</section>
+
+<section id="products" class="section grey">
+    <div class="section-header reveal">
+        <span class="subtitle">Our Work</span>
+        <h2>Featured Product Gallery</h2>
+    </div>
+
+    <div class="gallery">
+        <div class="product-item reveal">
+            <img src="item2.jpeg" alt="Industrial Enclosure">
+            <div class="overlay"><span>Custom IP65 Enclosures</span></div>
+        </div>
+        <div class="product-item reveal">
+            <img src="item3.jpeg" alt="MCC Panel">
+            <div class="overlay"><span>Distribution Boards</span></div>
+        </div>
+        <div class="product-item reveal">
+            <img src="item4.jpeg" alt="Mining Equipment">
+            <div class="overlay"><span>Forged Steel Tools</span></div>
+        </div>
+        <div class="product-item reveal">
+            <img src="item5.jpeg" alt="Automation System">
+            <div class="overlay"><span>PLC Control Systems</span></div>
+        </div>
+        <div class="product-item reveal">
+            <img src="item6.jpeg" alt="Power Rectifier">
+            <div class="overlay"><span>Switch-Mode Rectifiers</span></div>
+        </div>
+        <div class="product-item reveal">
+            <img src="item7.jpeg" alt="Civil Project">
+            <div class="overlay"><span>Civil Infrastructure</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stat reveal">
+        <h2 class="counter" data-target="7">0</h2>
+        <p>Years Experience</p>
+    </div>
+    <div class="stat reveal">
+        <h2 class="counter" data-target="250">0</h2>
+        <p>Projects Completed</p>
+    </div>
+    <div class="stat reveal">
+        <h2 class="counter" data-target="100">0</h2>
+        <p>Client Satisfaction %</p>
+    </div>
+</section>
+<a href="https://wa.me/27123456789?text=Hi%20THEKOVEST,%20I%20would%20like%20a%20quote."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <img src="logo1.jpeg" alt="THEKOVEST Logo" class="footer-logo" style="max-width: 180px; margin-bottom: 20px;">
+            <p>Engineering high-performance solutions for mining, electrical, and civil infrastructure. SABS compliant and industry-proven.</p>
+            <div class="social-links" style="margin-top: 20px;">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Navigation</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#cables">Cables & Wires</a></li>
+                <li><a href="#products">Product Gallery</a></li>
+                <li><a href="#contact" onclick="openModal()">Request Quote</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Get In Touch</h4>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <p><strong>General Enquiries:</strong></p>
+                    <a href="mailto:info@thekovest.co.za">info@thekovest.co.za</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <div>
+                    <p><strong>Sales & Quotes:</strong></p>
+                    <a href="mailto:sales@thekovest.co.za">sales@thekovest.co.za</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <p><strong>Call Us:</strong></p>
+                    <span>+27 (0) 12 345 6789</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Office Hours</h4>
+            <p><i class="far fa-clock"></i> Mon - Fri: 08:00 - 17:00</p>
+            <p><i class="far fa-clock"></i> Sat: By Appointment</p>
+            <p><i class="fas fa-map-marker-alt" style="margin-top: 15px;"></i> Gauteng, South Africa</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 THEKOVEST (PTY) LTD | All Rights Reserved | Registration No: 20XX/XXXXXX/07</p>
+    </div>
+</footer>
+
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeModal()" class="close">&times;</span>
+        <div class="section-header" style="margin-bottom: 30px;">
+            <span class="subtitle">Get In Touch</span>
+            <h2 style="font-size: 1.8rem;">Request a Quote</h2>
+        </div>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Subject / Project Type">
+            <textarea placeholder="Tell us about your requirements..." rows="4"></textarea>
+            <button class="btn" style="width: 100%;">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
