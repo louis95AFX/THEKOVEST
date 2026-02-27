@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | THEKOVEST (PTY) LTD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific Styles for Work Page */
+        .work-hero {
+            padding: 150px 5% 80px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/work-bg.jpg') center/cover;
+            text-align: center;
+            color: white;
+        }
+
+        .filter-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .filter-btn {
+            background: #f4f4f4;
+            border: none;
+            padding: 10px 25px;
+            margin: 5px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            transition: 0.3s;
+            border-radius: 4px;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: #d90429;
+            color: white;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px 5%;
+        }
+
+        .work-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .work-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .work-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .work-info {
+            padding: 20px;
+        }
+
+        .work-info h3 {
+            color: #2b2d42;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .work-info p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #edf2f4;
+            color: #d90429;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html"><img src="logo2.jpeg" alt="THEKOVEST Logo" class="logo"></a>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="work.html" style="color: #d90429;">Our Work</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </nav>
+            <div id="menu-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <section class="work-hero">
+        <span class="subtitle" style="color: #ef233c;">Portfolio</span>
+        <h1>Our Proven Track Record</h1>
+        <p>Excellence in Panel building Engineering & Industrial Solutions</p>
+    </section>
+
+    <section class="section">
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterWork('all', this)">All Projects</button>
+            <button class="filter-btn" onclick="filterWork('panel-building', this)">Panel building</button>
+            <button class="filter-btn" onclick="filterWork('installation', this)">Installation</button>
+        </div>
+
+        <div class="work-grid" id="workGrid">
+            <div class="work-card panel-building">
+                <img src="item3.jpeg" alt="MCC Panel Install" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Panel building</span>
+                    <h3>MCC Panel Installation</h3>
+                    <p>Complete design and installation of Motor Control Centres for a major manufacturing plant.</p>
+                </div>
+            </div>
+            
+
+            <div class="work-card installation">
+                <img src="item4.jpeg" alt="Forged Tools" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Installation</span>
+                    <h3>Custom Forged Installation Spikes</h3>
+                    <p>High-durability forged steel tools supplied for underground operations.</p>
+                </div>
+            </div>
+
+
+            <div class="work-card installation">
+                <img src="In1.jpeg" alt="Forged Tools" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Installation</span>
+                </div>
+            </div>
+            <div class="work-card installation">
+                <img src="in2.jpeg" alt="Forged Tools" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Installation</span>
+                </div>
+            </div>
+
+            <div class="work-card installation">
+                <img src="in3.jpeg" alt="Forged Tools" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Installation</span>
+                </div>
+            </div>
+
+            <div class="work-card installation">
+                <img src="in4.jpeg" alt="Forged Tools" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Installation</span>
+                </div>
+            </div>
+
+            <div class="work-card installation">
+                <img src="in5.jpeg" alt="Forged Tools" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Installation</span>
+                </div>
+            </div>
+
+            <div class="work-card panel-building">
+                <img src="item2.jpeg" alt="IP65 Enclosures" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Panel building</span>
+                    <h3>Custom IP65 Enclosures</h3>
+                    <p>Weather-resistant distribution boards for outdoor industrial environments.</p>
+                </div>
+            </div>
+
+            <div class="work-card panel-building">
+                <img src="item8.jpeg" alt="IP65 Enclosures" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Panel building</span>
+                </div>
+            </div>
+
+            <div class="work-card panel-building">
+                <img src="item9.jpeg" alt="IP65 Enclosures" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Panel building</span>
+                </div>
+            </div>
+
+            <div class="work-card panel-building">
+                <img src="item12.jpeg" alt="IP65 Enclosures" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Panel building</span>
+                </div>
+            </div>
+
+       
+
+            <div class="work-card panel-building">
+                <img src="item14.jpeg" alt="IP65 Enclosures" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Panel building</span>
+                </div>
+            </div>
+
+            <div class="work-card panel-building">
+                <img src="item17.jpeg" alt="IP65 Enclosures" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Panel building</span>
+                </div>
+            </div>
+
+            <div class="work-card panel-building">
+                <img src="item18.jpeg" alt="IP65 Enclosures" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Panel building</span>
+                </div>
+            </div>
+
+            <div class="work-card panel-building">
+                <img src="item19.jpeg" alt="IP65 Enclosures" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Panel building</span>
+                </div>
+            </div>
+
+            <div class="work-card panel-building">
+                <img src="item20.jpeg" alt="IP65 Enclosures" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Panel building</span>
+                </div>
+            </div>
+
+            <div class="work-card panel-building">
+                <img src="item21.jpeg" alt="IP65 Enclosures" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Panel building</span>
+                </div>
+            </div>
+
+            <div class="work-card panel-building">
+                <img src="item22.jpeg" alt="IP65 Enclosures" class="work-image">
+                <div class="work-info">
+                    <span class="tag">Panel building</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 THEKOVEST (PTY) LTD | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function filterWork(category, btn) {
+            const items = document.querySelectorAll('.work-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Manage active button state
+            buttons.forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+
+            // Manage visibility of items
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
