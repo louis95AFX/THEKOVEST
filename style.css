@@ -465,3 +465,107 @@ footer {
     transform: scale(1.1);
     transition: 0.3s;
 }
+
+.cables-section {
+    position: relative;
+    padding: 80px 20px;
+    color: #ffffff;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* Background Container */
+.cables-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    z-index: 0;
+}
+
+/* Image – NEVER CROPS */
+.cables-bg img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Dark overlay */
+.cables-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Content above background */
+.cables-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #d90429;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Cards */
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 14px;
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: #d90429;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    border-bottom: 2px solid #d90429;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.card-sub {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+.card ul {
+    list-style: none;
+    padding: 20px 0 0 0;
+    line-height: 1.8;
+}
+
+.special-list li i {
+    color: #d90429;
+    margin-right: 8px;
+}
