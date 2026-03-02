@@ -569,3 +569,8 @@ footer {
     color: #d90429;
     margin-right: 8px;
 }
+
+
+.percentage::after {
+    content: '%';
+}
