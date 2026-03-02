@@ -61,3 +61,25 @@ window.openModal = () => {
 window.closeModal = () => {
     document.getElementById("contactModal").style.display = "none";
 };
+
+function openCableModal() {
+    document.getElementById("cableModal").style.display = "block";
+    document.body.style.overflow = "hidden"; // Prevent background scrolling
+}
+
+function closeCableModal() {
+    document.getElementById("cableModal").style.display = "none";
+    document.body.style.overflow = "auto"; // Re-enable scrolling
+}
+
+// Close modal if user clicks outside of the box
+window.onclick = function(event) {
+    let contactModal = document.getElementById("contactModal");
+    let cableModal = document.getElementById("cableModal");
+    if (event.target == contactModal) {
+        closeModal();
+    }
+    if (event.target == cableModal) {
+        closeCableModal();
+    }
+}
